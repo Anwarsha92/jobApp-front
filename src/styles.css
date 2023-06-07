@@ -1,0 +1,52 @@
+
+body{
+    margin: 0px;
+    /* background-image: url(./assets/hiring-concept-with-empty-chair.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; */
+}
+
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+    /* display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    height: 100px;
+    background-color: #ffffffea;
+    align-items: center; */
+
+}
+
+.s{
+  display: none;
+}
+
+
+
+#softtech{
+  font-size: xx-large;
+}
+
+#logo{
+  transition: 1s;
+}
+
+#logo:hover{
+  transform: scale(1.1) rotate(45deg);
+}
+
+.nav-link:hover{
+  color: green;
+  transform: scale(1.1);
+}
+
+@media(max-width:450px){
+  #softtech{
+    font-size: larger;
+  }
+}

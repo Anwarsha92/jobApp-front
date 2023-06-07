@@ -1,0 +1,85 @@
+<div id="background" class="pb-5">
+
+    <!-- <div *ngFor="let i of applicationArray" class="container" id="box1">
+        <div style="display: inline;"><h3>Name</h3> : <h4>{{i.cname}}</h4></div>
+        <h3>Qualification</h3> : <h4>{{i.qualification}}</h4>
+        <h3>mobileNum</h3> : <h4>{{i.mobileNum}}</h4>
+        <h3>email</h3> : <h4>{{i.email}}</h4>
+        <h3>experience</h3> : <h4>{{i.experience}}</h4>
+        <h3>appliedfor</h3> : <h4>{{i.appliedfor}}</h4>
+
+    </div> -->
+
+
+
+
+
+
+    <div  id="table" class="container text-center">
+        <h3>Application Details</h3>
+        <div  *ngFor="let i of applicationArray">
+            <table class="mt-5 container text-center bg-white bg-opacity-50" style="border: 1px black solid;">
+                <!-- <thead>
+                    <tr style="border: 1px black solid;">
+                        <th>Name</th>
+                        <th>Qualification</th>
+                        <th>mobileNum</th>
+                        <th>email</th>
+                        <th>experience</th>
+                        <th>appliedfor</th>
+    
+                    </tr>
+                </thead> -->
+                <tbody  style="border: 1px black solid;">
+                    <tr style="border: 1px black solid;">
+                        <td >Name</td>
+                        <td style="font-weight: lighter;">{{i.cname}}</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Qualification</td>
+    
+                        <td style="font-weight: lighter;">{{i.qualification}}</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Mobile</td>
+    
+                        <td   style="font-weight: lighter;"><input #mob  id="mob" name="mob" class="text-center" style="border: none;" type="text"  value="{{i.mobileNum}}"></td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Email</td>
+    
+                        <td style="font-weight: lighter;">{{i.email}}</td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td>Experience</td>
+    
+                        <td style="font-weight: lighter;">{{i.experience}}</td>
+                    </tr>
+    
+                    <tr>
+                        <td>Applied for</td>
+    
+                        <td style="font-weight: lighter;">{{i.appliedfor}}</td>
+    
+                    </tr>
+    
+                </tbody>
+            </table>
+            <button (click)="accept(mob)" type="submit" class="btn btn-success me-2">Accept</button> <button type="submit" (click)="reject(mob)" class="btn btn-danger ">Reject</button>
+        </div>
+
+        <div class="text-center mt-5"><button routerLink="/admindashboard" class="button-3d">Back</button></div>
+
+        
+
+    </div>
+
+</div>

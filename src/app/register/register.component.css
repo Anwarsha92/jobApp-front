@@ -1,0 +1,306 @@
+
+
+#background{
+  background-image: url(/assets/hiring-concept-with-empty-chair.jpg);
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh; 
+    padding-top: 150px;
+
+}
+
+
+
+
+
+  
+  .content {
+      width: 430px;
+      padding: 40px 30px;
+      background: #dde1e7a9;
+      border-radius: 10px;
+      box-shadow: -3px -3px 7px #ffffff88,
+                   2px 2px 5px rgba(94,104,121,0.288);
+    }
+    
+    .content .text {
+      font-size: 33px;
+      font-weight: 600;
+      margin-bottom: 35px;
+      color: #595959;
+    }
+    
+    .field {
+      height: 50px;
+      width: 100%;
+      display: flex;
+      position: relative;
+    }
+    
+    .field:nth-child(2) {
+      margin-top: 20px;
+    }
+    
+    .field .input {
+      height: 100%;
+      width: 100%;
+      padding-left: 45px;
+      outline: none;
+      border: none;
+      font-size: 18px;
+      background: #dde1e7;
+      color: #595959;
+      border-radius: 25px;
+      box-shadow: inset 2px 2px 5px #BABECC,
+                  inset -5px -5px 10px #ffffff73;
+    }
+    
+    .field .input:focus {
+      box-shadow: inset 1px 1px 2px #BABECC,
+                  inset -1px -1px 2px #ffffff73;
+    }
+    
+    .field .span {
+      position: absolute;
+      color: #595959;
+      width: 50px;
+      line-height: 55px;
+    }
+    
+    .field .label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 45px;
+      pointer-events: none;
+      color: #666666;
+    }
+    
+    .field .input:valid ~ label {
+      opacity: 0;
+    }
+    
+    .forgot-pass {
+      text-align: left;
+      margin: 10px 0 10px 5px;
+    }
+    
+    .forgot-pass a {
+      font-size: 16px;
+      color: #666666;
+      text-decoration: none;
+    }
+    
+    .forgot-pass:hover a {
+      text-decoration: underline;
+    }
+    
+    .button {
+      margin: 15px 0;
+      width: 100%;
+      height: 50px;
+      font-size: 18px;
+      line-height: 50px;
+      font-weight: 600;
+      background: #dde1e7;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #595959;
+      box-shadow: 2px 2px 5px #BABECC,
+                 -5px -5px 10px #ffffff73;
+    }
+    
+    .button:focus {
+      color: #3498db;
+      box-shadow: inset 2px 2px 5px #BABECC,
+                 inset -5px -5px 10px #ffffff73;
+    }
+    
+    .sign-up {
+      margin: 10px 0;
+      color: #595959;
+      font-size: 16px;
+    }
+    
+    .sign-up a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    
+    .sign-up a:hover {
+      text-decoration: underline;
+    }
+  
+    
+  
+  
+  
+    .button {
+      width: 50%;
+      display: inline-block;
+      border: 1px solid #4f4f4f;
+      border-radius: 4px;
+      transition: all 0.2s ease-in;
+      position: relative;
+      overflow: hidden;
+      font-size: 19px;
+      color: black;
+      z-index: 1;
+     }
+     
+     .button:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.25);
+      top: 100%;
+      width: 140%;
+      height: 180%;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 50%;
+      display: block;
+      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+      z-index: -1;
+     }
+     
+     .button:after {
+      content: "";
+      position: absolute;
+      left: 55%;
+      transform: translateX(-50%) scaleY(1) scaleX(1.45);
+      top: 180%;
+      width: 160%;
+      height: 190%;
+      background-color: #39bda7;
+      border-radius: 50%;
+      display: block;
+      transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+      z-index: -1;
+     }
+     
+     .button:hover {
+      color: #ffffff;
+      border: 1px solid #39bda7;
+     }
+     
+     .button:hover:before {
+      top: -35%;
+      background-color: #39bda7;
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+     }
+     
+     .button:hover:after {
+      top: -45%;
+      background-color: #39bda7;
+      transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+     }
+  
+  
+     /* loader */
+  
+     
+  .loader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+    border-radius: 50%;
+    -webkit-animation: dot-pulse2 1.5s ease-in-out infinite;
+    animation: dot-pulse2 1.5s ease-in-out infinite;
+  }
+  
+  .dot-1 {
+    background-color: #4285f4;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  
+  .dot-2 {
+    background-color: #34a853;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  
+  .dot-3 {
+    background-color: #fbbc05;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+  
+  .dot-4 {
+    background-color: #ea4335;
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+  }
+  
+  .dot-5 {
+    background-color: #4285f4;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+  }
+  
+  @keyframes dot-pulse2 {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+  
+    50% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    100% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      opacity: 0.5;
+    }
+  }
+
+
+  footer{
+    
+    /* min-height: 40px; */
+    background-color: rgb(249, 248, 248);
+    width: 100%;
+  
+   
+  }
+  
+  .footcnt{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    padding-top: 0px;
+  font-size: small;
+  }
+  .footcnt p{
+    color: #9b9b9b;
+  
+  }
+  
+
+
+  @media(max-width:475px){
+    .content{
+      width: 90%;
+    }
+  }

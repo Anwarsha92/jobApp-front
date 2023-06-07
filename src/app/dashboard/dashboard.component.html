@@ -1,0 +1,436 @@
+<div id="header">
+    <div id="careers" class="text-center">
+        <h3>Careers</h3>
+        <p>We produce great ideas and build new world</p>
+    </div>
+
+
+</div>
+
+
+<app-delete [item]="mob"  (onCancel)="cancelChild()" (onDelete)="delAcc($event)"></app-delete>
+
+<div [ngClass]="mob?'s':''" id="main" class="mt-5" style=" min-height: 100vh; color: rgb(0, 0, 0);">
+
+
+
+    <div class="text-center">
+        <h3>Interested in Join Us</h3>
+        <p>Please send a cover letter & resume to info@softtechweb.com</p>
+    </div>
+    <div class="job desig container p-0 mb-5">
+        <div class="jobtitile">
+            <p>Web Developer</p>
+        </div>
+        <div class="details p-2 pb-5">
+            <div class="descr">
+                <div>
+                    <h3>Job Description</h3>
+                    <p>A creative Web Developer is needed to join our team. The ideal candidate will be creatively
+                        driven, have a degree in a web design or related subject and some relevant experience, with the
+                        ability to show a portfolio. The web designer will be joining the online team designing and
+                        developing Front End websites and web applications, for a diverse range of clients.</p>
+
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript, NodeJs</li>
+                        <li>Awareness of frameworks.</li>
+                        <li>Previous experience within an agency or commercial environment would be a great advantage.
+                        </li>
+                        <li>Understanding of Jscript, frameworks and libraries.</li>
+                        <li>Understanding of cross browser checking.</li>
+                        <li>Experience or understanding of designing for desktop through to mobile devices.</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="form container">
+                <h3 class="">Submit Your Resume</h3>
+                <form [formGroup]="submitForm1" (ngSubmit)="submit1()" action="" class="p-2">
+
+
+                    <div class="form__group field">
+                        <input formControlName="cname1" type="input" id="cname1" name="cname1" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Name</label>
+                    </div>
+
+                    <div *ngIf="submitForm1.get('cname1')?.errors && submitForm1.get('cname1')?.touched">
+                        <p class="text-danger">Name contain uppercase only</p>
+                    </div>
+
+
+                    <div class="form__group field">
+                        <!-- <input formControlName="qual1" type="input" id="qual1" name="qual1" class="form__field" placeholder="Name" required=""> -->
+
+
+
+                        <select formControlName="qual1" type="input" id="qual1" name="qual1" class="form__field">
+                            <option value="B-tech">B-tech</option>
+                            <option value="Mtech">M-tech</option>
+                            <option value="Degree">Degree</option>
+                            <option value="Plustwo">plustwo</option>
+                        </select>
+                        <label for="name" class="form__label">Qualification</label>
+                    </div>
+
+
+                    <div *ngIf="submitForm1.get('qual1')?.errors && submitForm1.get('qual1')?.touched">
+                        <p class="text-danger">Enter valid input</p>
+                    </div>
+
+                    <div class="form__group field">
+                        <input formControlName="mobi1" type="input" id="mobi1" name="mobi1" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Registered Mobile</label>
+                    </div>
+
+                    <div *ngIf="submitForm1.get('mobi1')?.errors && submitForm1.get('mobi1')?.touched">
+                        <p class="text-danger">Enter 10 digit mobile number</p>
+                    </div>
+
+                    <div class="form__group field">
+                        <input formControlName="mail1" type="input" id="mail1" name="mail1" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Email</label>
+                    </div>
+
+                    <div *ngIf="submitForm1.get('mail1')?.errors && submitForm1.get('mail1')?.touched">
+                        <p class="text-danger">Enter valid email</p>
+                    </div>
+
+                    <div class="form__group field">
+                        <input formControlName="expe1" type="input" id="expe1" name="expe1" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Experience</label>
+                    </div>
+
+
+                    <div *ngIf="submitForm1.get('expe1')?.errors && submitForm1.get('expe1')?.touched">
+                        <p class="text-danger">Enter valid input</p>
+                    </div>
+
+                    <div class="form__group field">
+                        <!-- <input formControlName="appfor1" type="input" class="form__field"  id="appfor1" style="font-weight: bolder;" name="appfor1" placeholder="Name" required=""> -->
+
+                        <select style="font-weight: bolder;" formControlName="appfor1" type="input" id="appfor1"
+                            name="appfor1" class="form__field">
+                            <option value="Web Developer">Web Developer</option>
+                        </select>
+                        <label for="name" class="form__label">Applied for</label>
+                    </div>
+
+
+                    <div *ngIf="submitForm1.get('appfor1')?.errors && submitForm1.get('appfor1')?.touched">
+                        <p class="text-danger">Enter valid input</p>
+                    </div>
+
+                    <button type="submit" class="btn_center mt-2">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="job desig container p-0 mb-5">
+        <div class="jobtitile">
+            <p>Software Tester</p>
+        </div>
+        <div class="details p-2 pb-5">
+            <div class="descr">
+                <div>
+                    <h3>Job Description</h3>
+                    <p>A creative Software Tester is needed to join our team. The ideal candidate will be creatively
+                        driven, have a degree in a web design or related subject and some relevant experience, with the
+                        ability to show a portfolio. The web designer will be joining the online team designing and
+                        developing Front End websites and web applications, for a diverse range of clients.</p>
+
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript, NodeJs</li>
+                        <li>Awareness of frameworks.</li>
+                        <li>Previous experience within an agency or commercial environment would be a great advantage.
+                        </li>
+                        <li>Understanding of Jscript, frameworks and libraries.</li>
+                        <li>Understanding of cross browser checking.</li>
+                        <li>Experience or understanding of designing for desktop through to mobile devices.</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="form container">
+                <h3>Submit Your Resume</h3>
+                <form [formGroup]="submitForm2" (ngSubmit)="submit2()" action="" class="p-2">
+
+
+                    <div class="form__group field">
+                        <input formControlName="cname2" type="input" id="cname2" name="cname2" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Name</label>
+                    </div>
+
+                    <div *ngIf="submitForm2.get('cname2')?.errors && submitForm2.get('cname2')?.touched">
+                        <p class="text-danger">Name contain uppercase only</p>
+                    </div>
+
+
+                    <div class="form__group field">
+                        <!-- <input formControlName="qual2" type="input" id="qual2" name="qual2" class="form__field" placeholder="Name" required=""> -->
+
+
+                        <select formControlName="qual2" type="input" id="qual2" name="qual2" class="form__field">
+                            <option value="B-tech">B-tech</option>
+                            <option value="Mtech">M-tech</option>
+                            <option value="Degree">Degree</option>
+                            <option value="Plustwo">Plustwo</option>
+                        </select>
+                        <label for="name" class="form__label">Qualification</label>
+                    </div>
+
+                    <div *ngIf="submitForm2.get('qual2')?.errors && submitForm2.get('qual2')?.touched">
+                        <p class="text-danger">Enter valid input</p>
+                    </div>
+
+
+
+                    <div class="form__group field">
+                        <input formControlName="mobi2" type="input" id="mobi2" name="mobi2" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Registered Mobile</label>
+                    </div>
+
+                    <div *ngIf="submitForm2.get('mobi2')?.errors && submitForm2.get('mobi2')?.touched">
+                        <p class="text-danger">Enter 10 digit mobile number</p>
+                    </div>
+
+
+
+                    <div class="form__group field">
+                        <input formControlName="mail2" type="input" id="mail2" name="mail2" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Email</label>
+                    </div>
+
+                    <div *ngIf="submitForm2.get('mail2')?.errors && submitForm2.get('mail2')?.touched">
+                        <p class="text-danger">Enter valid mail</p>
+                    </div>
+
+
+
+
+                    <div class="form__group field">
+                        <input formControlName="expe2" type="input" id="expe2" name="expe2" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Experience</label>
+                    </div>
+
+                    <div *ngIf="submitForm2.get('expe2')?.errors && submitForm2.get('expe2')?.touched">
+                        <p class="text-danger">Enter valid input</p>
+                    </div>
+
+
+
+                    <div class="form__group field">
+                        <!-- <input formControlName="appfor2" type="input" class="form__field" value="Software Tester" id="appfor2" style="font-weight: bolder;" name="appfor2" placeholder="Name" required=""> -->
+
+
+                        <select style="font-weight: bolder;" formControlName="appfor2" type="input" id="appfor2"
+                            name="appfor2" class="form__field">
+                            <option value="Software Tester">Software Tester</option>
+                        </select>
+                        <label for="name" class="form__label">Applied for</label>
+                    </div>
+
+                    <div *ngIf="submitForm2.get('appfor2')?.errors && submitForm2.get('appfor2')?.touched">
+                        <p class="text-danger">Enter valid input</p>
+                    </div>
+
+
+
+                    <button class="btn_center mt-2">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="job desig container p-0 mb-5">
+        <div class="jobtitile">
+            <p>Web Designer</p>
+        </div>
+        <div class="details p-2 pb-5">
+            <div class="descr">
+                <div>
+                    <h3>Job Description</h3>
+                    <p>A creative Web Designer is needed to join our team. The ideal candidate will be creatively
+                        driven, have a degree in a web design or related subject and some relevant experience, with the
+                        ability to show a portfolio. The web designer will be joining the online team designing and
+                        developing Front End websites and web applications, for a diverse range of clients.</p>
+
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript, NodeJs</li>
+                        <li>Awareness of frameworks.</li>
+                        <li>Previous experience within an agency or commercial environment would be a great advantage.
+                        </li>
+                        <li>Understanding of Jscript, frameworks and libraries.</li>
+                        <li>Understanding of cross browser checking.</li>
+                        <li>Experience or understanding of designing for desktop through to mobile devices.</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="form container">
+                <h3>Submit Your Resume</h3>
+                <form [formGroup]="submitForm3" (ngSubmit)="submit3()" action="" class="p-2">
+
+
+                    <div class="form__group field">
+                        <input formControlName="cname3" type="input" id="cname3" name="cname3" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Name</label>
+                    </div>
+
+                    <div *ngIf="submitForm3.get('cname3')?.errors && submitForm3.get('cname3')?.touched">
+                        <p class="text-danger">Name contain uppercase only</p>
+                    </div>
+
+
+                    <div class="form__group field">
+                        <select formControlName="qual3" type="input" id="qual3" name="qual3" class="form__field">
+                            <option value="B-tech">B-tech</option>
+                            <option value="Mtech">M-tech</option>
+                            <option value="Degree">Degree</option>
+                            <option value="Plustwo">Plustwo</option>
+                        </select>
+                        <label for="name" class="form__label">Qualification</label>
+                    </div>
+
+                    <div *ngIf="submitForm3.get('qual3')?.errors && submitForm3.get('qual3')?.touched">
+                        <p class="text-danger">Enter valid input</p>
+                    </div>
+
+                    <div class="form__group field">
+                        <input formControlName="mobi3" type="input" id="mobi3" name="mobi3" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Registered Mobile</label>
+                    </div>
+
+                    <div *ngIf="submitForm3.get('mobi3')?.errors && submitForm3.get('mobi3')?.touched">
+                        <p class="text-danger">Enter 10 digit mobile number</p>
+                    </div>
+
+                    <div class="form__group field">
+                        <input formControlName="mail3" type="input" id="mail3" name="mail3" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Email</label>
+                    </div>
+
+                    <div *ngIf="submitForm3.get('mail3')?.errors && submitForm3.get('mail3')?.touched">
+                        <p class="text-danger">Enter valid mail</p>
+                    </div>
+
+
+                    <div class="form__group field">
+                        <input formControlName="expe3" type="input" id="expe3" name="expe3" class="form__field"
+                            placeholder="Name" required="">
+                        <label for="name" class="form__label">Experience</label>
+                    </div>
+
+                    <div *ngIf="submitForm3.get('expe3')?.errors && submitForm2.get('expe3')?.touched">
+                        <p class="text-danger">Enter valid input</p>
+                    </div>
+
+                    <div class="form__group field">
+                        <!-- <input formControlName="appfor3" type="input" class="form__field" value="Web Designer" id="appfor3" style="font-weight: bolder;" name="appfor3" placeholder="Name" required=""> -->
+
+
+                        <select style="font-weight: bolder;" formControlName="appfor3" type="input" id="appfor3"
+                            name="appfor3" class="form__field">
+                            <option value="Web Designer">Web Designer</option>
+                        </select>
+                        <label for="name" class="form__label">Applied for</label>
+                    </div>
+
+                    <div *ngIf="submitForm3.get('appfor3')?.errors && submitForm2.get('appfor3')?.touched">
+                        <p class="text-danger">Enter valid input</p>
+                    </div>
+
+                    <button class="btn_center mt-2">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand">Soft-Tech/Career</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/notifications"><i class="las la-bell"></i>Notifications</a>
+                </li>
+                <li class="nav-item">
+                    <button (click)="deleteAcc()" class="btn nav-link text-danger" ><i class="las la-trash"></i> Delete account</button>
+                </li>
+
+                <div id="s1" class="nav-item">
+                    <button (click)="logout()" class="btn nav-link text-danger" ><i class="las la-sign-out-alt"></i>
+                        Logout</button>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<footer>
+    <div class="text-center">
+        <p style="font-size: larger;">SOFT-TECH<span style="font-size: small;">- Copyright ©  2010-2025 Soft-Tech Company S.L. All rights reserved.</span></p>
+    </div>
+
+    <div class="footcnt">
+
+        <p>Web Design Cochin Testimonials</p>
+        <p>Cochin Website Development</p>
+        <p>Website Content Writing & Marketing</p>
+
+    </div>
+
+    <div class="footcnt">
+
+        <p>Custom Web Design & Development</p>
+        <p>Website Design Blogs & Forums</p>
+        <p>Cochin Media & Web Design</p>
+        <p>Social Media Design & Developoment</p>
+
+        <p>Web App Design & Development</p>
+
+
+    </div>
+</footer>
